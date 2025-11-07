@@ -1,0 +1,21 @@
+# build artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dll
+/build/
+/bin/
+/dist/
+
+# macOS / Windows noise
+.DS_Store
+Thumbs.db
+
+# editor/IDE junk
+.vscode/
+.idea/
+*.swp
+*.swo
