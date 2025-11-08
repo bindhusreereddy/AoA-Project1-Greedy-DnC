@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-benchmark_plot.py
+generate_plots.py
 Benchmarks C++ programs and generates runtime plots
 """
 
@@ -107,7 +107,7 @@ int main(int argc, char* argv[]) {
 }
 """
 
-    with open('tunnel_greedy_bench.cpp', 'w') as f:
+    with open('../tunnel_greedy_bench.cpp', 'w') as f:
         f.write(benchmark_code)
 
     print("Created tunnel_greedy_bench.cpp")
@@ -253,7 +253,7 @@ int main(int argc, char* argv[]) {
 }
 """
 
-    with open('fiber_network_bench.cpp', 'w') as f:
+    with open('../fiber_network_bench.cpp', 'w') as f:
         f.write(benchmark_code)
 
     print("Created fiber_network_bench.cpp")
