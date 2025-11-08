@@ -1,0 +1,176 @@
+\section{LLM Usage Disclosure}
+\label{app:llm-disclosure}
+
+Per course requirements, we document all Large Language Model assistance used in this project. We used Claude 3.5 Sonnet (Anthropic, accessed via claude.ai) exclusively for LaTeX document formatting and writing style assistance. All algorithmic content, proofs, and implementations were developed by the authors.
+
+\subsection{Tool Information}
+\noindent
+\textbf{LLM:} Claude 3.5 Sonnet (Anthropic)
+
+\noindent
+\textbf{Access:} November 2025 via claude.ai web interface
+
+\subsection{LaTeX Document Setup}
+
+\noindent
+\textbf{Prompt:} 
+
+\textit{``I need to create an ACM conference paper. How do I set up the acmart document class and disable copyright blocks?''}
+
+\noindent
+\textbf{Response:} 
+
+Received template with \verb|\documentclass[sigconf]{acmart}|, \verb|\settopmatter{printacmref=false}|, and author/affiliation commands.
+
+\noindent
+\textbf{Usage:} 
+
+Applied template structure. We filled in all content ourselves.
+
+\subsection{Mathematical Notation}
+
+\noindent
+\textbf{Prompt:} 
+
+\textit{``What's the LaTeX syntax for Big-O notation, set notation with conditions, and summations?''}
+
+\noindent
+\textbf{Response:} 
+
+Received examples like \verb|$O(n \log n)$|, \verb|$\{x \mid P(x)\}$|, and \verb|$\sum_{i=1}^n$|.
+
+\noindent
+\textbf{Usage:} 
+
+Applied syntax patterns to format our mathematical expressions.
+
+\subsection{Figure Insertion}
+
+\noindent
+\textbf{Prompt:} 
+
+\textit{``How do I insert PNG images with captions and reference them in text?''}
+
+\noindent
+\textbf{Response:} 
+
+Received \texttt{figure} environment template with \verb|\includegraphics|, \verb|\caption|, \verb|\label|, and \verb|\ref| commands.
+
+\noindent
+\textbf{Usage:} 
+
+Applied to insert our experimental plots (Figures~\ref{fig:greedy-runtime} and \ref{fig:fiber-runtime}).
+
+\subsection{Code Listings}
+
+\noindent
+\textbf{Prompt:} 
+
+\textit{``How do I format C++ code in appendices with syntax highlighting?''}
+
+\noindent
+\textbf{Response:} 
+
+Suggested listings package with settings for basicstyle, breaklines, and frame.
+
+\noindent
+\textbf{Usage:} 
+
+Applied to format our code in appendices. Code was written by us.
+
+\subsection{Writing Style Assistance}
+
+\noindent
+\textbf{Prompt 1:} 
+
+\textit{``Review my abstract for clarity. Here's my draft: [our original text]''}
+
+\noindent
+\textbf{Response:} 
+
+Suggested removing redundancy, improving flow, and following problem→approach→results structure.
+
+\noindent
+\textbf{Usage:} 
+
+Incorporated style suggestions. All technical content remained ours.
+
+\vspace{1em}
+\noindent
+\textbf{Prompt 2:} 
+
+\textit{``How should I structure a correctness proof for a greedy algorithm?''}
+
+\noindent
+\textbf{Response:} 
+
+Recommended organizing around greedy choice property and optimal substructure.
+
+\noindent
+\textbf{Usage:} 
+
+Applied organizational framework. Proof content developed by us.
+
+\vspace{1em}
+\noindent
+\textbf{Prompt 3:} 
+
+\textit{``How can I improve transitions between sections?''}
+
+\noindent
+\textbf{Response:} 
+
+Suggested adding connecting sentences between major sections.
+
+\noindent
+\textbf{Usage:} 
+
+Added brief transitions without changing technical content.
+
+\subsection{Plotting and Visualization}
+
+\noindent
+\textbf{Prompt:} 
+
+\textit{``I have CSV benchmark data. How do I create plots in Python with theoretical O(n log n) curves overlaid?''}
+
+\noindent
+\textbf{Response:} 
+
+Suggested using pandas for CSV reading, matplotlib for plotting, numpy for computing \texttt{n*log(n)}, and median-based coefficient fitting.
+
+\noindent
+\textbf{Usage:} 
+
+Used as starting point for our plotting approach. We wrote our complete benchmarking and plotting scripts.
+
+\subsection{Technical Debugging}
+
+\noindent
+\textbf{Prompt:} 
+
+\textit{``My LaTeX won't compile - getting 'Undefined control sequence' errors near math formulas.''}
+
+\noindent
+\textbf{Response:} 
+
+Suggested checking for missing packages (\texttt{amsmath}, \texttt{amssymb}) and verifying balanced delimiters.
+
+\noindent
+\textbf{Usage:} 
+
+Used to debug and resolve compilation issues in our document.
+
+\subsection{Verification and Responsibility}
+
+We independently verified all technical content through:
+\begin{itemize}[nosep]
+  \item Hand-tracing algorithms on example inputs
+  \item Line-by-line review of proofs for logical soundness
+  \item Testing code with various input sizes and edge cases
+  \item Confirming experimental results match theoretical predictions
+  \item Peer review between co-authors
+\end{itemize}
+
+\noindent
+\textbf{We take full responsibility for the correctness of all technical content in this paper.} Any errors are solely our responsibility and not attributable to the LLM tool.
