@@ -119,14 +119,14 @@ See `plots/` directory for experimental graphs comparing observed vs. theoretica
 
 ```bash
 # Compile Tunnel Packing (Greedy)
-g++ -O2 -std=c++17 src/tunnel_greedy.cpp -o tunnel_greedy
+g++ -O2 -std=c++17 tunnel_greedy.cpp -o tunnel_greedy
 
 # Compile Fiber Network Analysis (Divide-and-Conquer)
-g++ -O2 -std=c++17 src/fiber_network_analysis.cpp -o fiber_network
+g++ -O2 -std=c++17 fiber_network_analysis.cpp -o fiber_network
 
 # Compile Benchmarks
-g++ -O2 -std=c++17 src/tunnel_greedy_benchmark.cpp -o tunnel_benchmark
-g++ -O2 -std=c++17 src/fiber_network_benchmark.cpp -o fiber_benchmark
+g++ -O2 -std=c++17 tunnel_greedy_benchmark.cpp -o tunnel_benchmark
+g++ -O2 -std=c++17 fiber_network_benchmark.cpp -o fiber_benchmark
 ```
 
 ### Execution
@@ -189,22 +189,6 @@ This project demonstrates:
 ## 📝 License
 
 This project is submitted as coursework for Analysis of Algorithms (Fall 2025) at the University of Florida.
-
----
-
-## 🙏 Acknowledgments
-
-- Course Instructor: [Instructor Name]
-- LLM Assistance: Documented in `report/llm_disclosure.tex`
-- Template: ACM Conference Proceedings Format
-
----
-
-## 📚 References
-
-- ITU-T G.114: One-way transmission time recommendations
-- Cormen, T. H., et al. (2009). *Introduction to Algorithms* (3rd ed.)
-- Centroid Decomposition: Classical divide-and-conquer technique for tree problems
 
 ---
 
